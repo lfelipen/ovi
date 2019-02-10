@@ -1,0 +1,2 @@
+# pretarea
+pretarea
