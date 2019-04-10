@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="../css/bootstrap.css" media="screen">
-   
+    <link rel="stylesheet" href="../css/style.css" media="screen">
   </head>
   <body>
       
@@ -57,6 +57,55 @@
               <div class="col-lg-12">
                 <div class="page-header">
                   <h1 id="containers">Lecturas</h1>
+
+                  <div class="container">
+                      <div class="row form-group">
+                            <div class="col-xs-12">
+                                <ul class="nav nav-pills nav-justified thumbnail setup-panel">
+                                    <li class="active"><a href="#step-1">
+                                        PROGRAMACION WEB
+                                        <!-- <p class="list-group-item-text">First step description</p> -->
+                                    </a></li>
+                                    <li ><a href="#step-2">
+                                      PHP
+                                    </a></li>
+                                    <!-- <li ><a href="#step-3">
+                                        <h4 class="text-orange list-group-item-heading">Step 3</h4>
+                                    </a></li>
+                                    <li ><a href="#step-3">
+                                        <h4 class="list-group-item-heading">Step 3</h4>
+                                    </a></li>
+                                    <li ><a href="#step-3">
+                                        <h4 class="list-group-item-heading">Step 3</h4>
+                                    </a></li> -->
+                                </ul>
+                            </div>
+                      </div>
+                        <div class="row setup-content" id="step-1">
+                            <div class="col-xs-12">
+                                <div class="col-md-12 well text-justify">
+                                    <h1 class="text-center"> ¿Que es la programacion web?</h1>
+                                    <p>La programación web o desarrollo web es una área muy grande en el mundo de la internet, el desarrollo web sorprende día a día con sus cambio evolutivos, no solo es interface sino también en sus productos, entre las necesidades de las páginas web también está la recolección de información, en la cual llegamos a la interconexión de las páginas con bases de datos,   estos para ser organizados y administrados de una buena manera, como también aún podemos encontrar páginas web que no las requieren ya que son propias de mostrar información.</p>
+                                    <button id="activate-step-2" class="btn btn-primary btn-lg">Siguiente</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row setup-content" id="step-2">
+                            <div class="col-xs-12">
+                                <div class="col-md-12 well">
+                                  <h1 class="text-justify"> ¿Que es php?</h1>
+                                  <p>php es acrónimo de Hypertext Preprocessor es un lenguaje de código abierto que se incrusta en el html de la página y ayuda a simplificar ciertas acciones que son repetitivas con solo código, además de esto también nos ayuda con la conexión entre la página web y la base de datos, en cierto punto se vuelve el intermediario entre estas y nos ayuda también a mostrar la información que sea necesaria de mostrar en la pagina web.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row setup-content" id="step-3">
+                            <div class="col-xs-12">
+                                <div class="col-md-12 well">
+                                    <h1 class="text-center"> STEP 3</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
               </div>
@@ -80,7 +129,40 @@
 
      <!-- SCRIPTS
       ================================================== -->
-    <script src="./js/jquery-3.3.1.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+    <script>
+    $(document).ready(function() {
+    
+        var navListItems = $('ul.setup-panel li a'),
+        allWells = $('.setup-content');
+        allWells.hide();
+
+        navListItems.click(function(e)
+        {
+            e.preventDefault();
+            var $target = $($(this).attr('href')),
+                $item = $(this).closest('li');
+            
+            if (!$item.hasClass('disabled')) {
+                navListItems.closest('li').removeClass('active');
+                $item.addClass('active');
+                allWells.hide();
+                $target.show();
+            }
+        });
+        
+        $('ul.setup-panel li.active a').trigger('click');
+        
+        // DEMO ONLY //
+        $('#activate-step-2').on('click', function(e) {
+            $('ul.setup-panel li:eq(1)').removeClass('disabled');
+            $('ul.setup-panel li a[href="#step-2"]').trigger('click');
+            //$(this).remove();
+        })    
+    });
+
+    </script>
   </body>
 </html>
