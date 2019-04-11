@@ -51,35 +51,64 @@
     </div>
     <!-- FIN
     ================================================== -->
-
+    <!-- estilo acordeon para actividades interectivas-->
     <div class="container">
-      <!-- BANNER
-      ================================================== -->
-      <div class="page-header" id="banner">
-        <div class="bs-docs-section">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="page-header">
-                  <h1 id="containers">Actividades</h1>
-                </div>
+      <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Collapsible Group Item #1
+              </button>
+            </h2>
+          </div>
+      
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+                <p>HTML es la Abreviatura de hipertext Markup Lenguaje o lenguaje de marcas de hipertexto. Html es el lenguaje con el que se escriben las páginas web. </p>
+                <h3> ¿Qué se puede hacer con este lenguaje?</h3>
+                <p>  Por ejemplo especificar las imágenes de la página, los textos o los gráficos. También se puede dar formato a los textos (tipo, color y tamaño de la fuente).
+    
+                  Todos los archivos de las páginas web tienen extensión .html ó .htm. Las instrucciones (se llaman tags o etiquetas) de este lenguaje siempre empiezan con el signo < y terminan con > (la instrucción aparece entre estos dos símbolos). Las instrucciones <html> y </html> sirven para el principio y el final del documento. Todas las ordenes, etiquetas o tags (es todo lo mismo) acaban con el mismo nombre pero añadiendo la barra /. </p>
                 
-              </div>
             </div>
-        </div>
-      </div>
-
-
-      <!-- FOOTER
-      ================================================== -->
-      <footer>
-        <div class="row">
-          <div class="col-lg-12">
-            <p>Elaborado por: <em>Grupo_301122_47</em> </p>
-            <p>Código liberado bajo la <a href="https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE">MIT License</a>.</p>
-           
           </div>
         </div>
-      </footer>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+               ACTIVIDAD 1: JUEGA Y APRENDE HTML (Ver Instrucciones)
+              </button>
+            </h2>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+              <p>
+                  Juego para repasar las etiquetas HTML usadas en el lenguaje HTML, lenguaje usado para la construcción de las páginas web. Selecciona la etiqueta que consideres adecuada en cada caso. Si quieres repasar a aprender las soluciones antes de hacer el juego visita el siguiente enlace: HTML desde Cero</p>
+                  
+                  <a class="btn btn-danger" href="https://es.educaplay.com/es/recursoseducativos/2168187/html5/etiquetas_web.htm#!" target="_blank" role="button">Click para Jugar</a>
+                </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                ACTIVIDAD 2: SOPA DE LETRAS HTML
+              </button>
+            </h2>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+             <h3>Instrucciones</h3>
+             <p>Intenta resolver la sopa de letras. Para ello busca las palabras escondidas en ella y selecciónalas deslizando el ratón sobre las letras que las componen. Si te atascas y no encuentras más, puedes pulsar en Mostrar Palabra para que te diga una palabra que buscar si ésta no la tienes visible. Si la tuvieras ya visible, te indicará dónde se encuentra escondida esa palabra.Cuantas menos pistas pidas para resolver la actividad, más puntos obtendrás.</p>
+             <a class="btn btn-danger" href="https://es.educaplay.com/es/recursoseducativos/786198/html5/sopa_de_letras_html.htm#!" target="_blank" role="button">Click para Resolver</a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
      <!-- SCRIPTS
